@@ -53,3 +53,42 @@ dkms.conf
 
 # debug information files
 *.dwo
+
+# Text 
+*.txt
+*.pdf
+*.doc
+*.docx
+*.xls
+*.xlsx
+*.ppt
+*.pptx
+*.odt
+*.ods
+*.odp
+*.odg
+*.odf
+*.odc
+*.odb
+*.odf
+*.odm
+*.odg
+*.odp
+*.odt
+*.ods
+*.odc
+*.odb
+*.odf
+*.odm
+*.odg
+*.odp
+*.odt
+*.ods
+*.odc
+*.odb
+*.odf
+*.odm
+*.odg
+*.odp
+*.odt
+*.ods
