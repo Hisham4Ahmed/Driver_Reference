@@ -92,3 +92,6 @@ dkms.conf
 *.odp
 *.odt
 *.ods
+*.vscode-ctages
+*.txt
+*.pdf
