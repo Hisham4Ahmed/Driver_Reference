@@ -47,5 +47,6 @@
 
 #define AllGroupOutput      0xFF
 
-
+#define False               0
+#define True                1
 #endif /* _MACROS_H_ */
