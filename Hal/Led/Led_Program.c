@@ -19,26 +19,67 @@ static uint8_t LedsPin[Led_MaxNo]=  LedPinValue;
 
 void mLed_Init(uint8_t LedNumber)
 {
-  mDIO_SetDirectionForPin(LedsGroup[LedNumber-StartIndex],LedsPin[LedNumber-StartIndex],Output);
+  if(LedNumber<=Led_MaxNo)
+  {
+      mDIO_SetDirectionForPin(LedsGroup[LedNumber-StartIndex],LedsPin[LedNumber-StartIndex],Output);
+  }
+  else 
+  {
+        /**
+         * @todo Handle the  Led Out Of Range 
+         * 
+         */
+  }
 }
 void mLed_On(uint8_t LedNumber)
 {
-    #if Led_ConnectionType==Led_SourceConnection
+    if(LedNumber<=Led_MaxNo)
+    {
+        #if Led_ConnectionType==Led_SourceConnection
         mDIO_WritePin(LedsGroup[LedNumber-StartIndex],LedsPin[LedNumber-StartIndex],High);
-    #elif Led_ConnectionType==Led_SinkConnection
-        mDIO_WritePin(LedsGroup[LedNumber-StartIndex],LedsPin[LedNumber-StartIndex],Low);
-    #endif
+        #elif Led_ConnectionType==Led_SinkConnection
+            mDIO_WritePin(LedsGroup[LedNumber-StartIndex],LedsPin[LedNumber-StartIndex],Low);
+        #endif
+    }
+    else 
+    {
+          /**
+           * @todo Handle the  Led Out Of Range 
+           * 
+           */
+    }
+
 }
 void mLed_Off(uint8_t LedNumber)
 {
-    #if Led_ConnectionType==Led_SourceConnection
-        mDIO_WritePin(LedsGroup[LedNumber-StartIndex],LedsPin[LedNumber-StartIndex],Low);
-    #elif Led_ConnectionType==Led_SinkConnection
-        mDIO_WritePin(LedsGroup[LedNumber-StartIndex],LedsPin[LedNumber-StartIndex],High);
-    #endif
+    if(LedNumber<=Led_MaxNo)
+    {
+        #if Led_ConnectionType==Led_SourceConnection
+            mDIO_WritePin(LedsGroup[LedNumber-StartIndex],LedsPin[LedNumber-StartIndex],Low);
+        #elif Led_ConnectionType==Led_SinkConnection
+            mDIO_WritePin(LedsGroup[LedNumber-StartIndex],LedsPin[LedNumber-StartIndex],High);
+        #endif
+    }
+    else 
+    {
+          /**
+           * @todo Handle the  Led Out Of Range 
+           * 
+           */
+    }
 }
 void mLed_Toggle(uint8_t LedNumber)
 {
-        mDIO_TogglePin(LedsGroup[LedNumber-StartIndex],LedsPin[LedNumber-StartIndex]);
+    if(LedNumber<=Led_MaxNo)
+    {
+      mDIO_TogglePin(LedsGroup[LedNumber-StartIndex],LedsPin[LedNumber-StartIndex]);
+    }
+    else 
+    {
+          /**
+           * @todo Handle the  Led Out Of Range 
+           * 
+           */
+    }
 
 }
