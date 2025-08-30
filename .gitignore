@@ -95,3 +95,5 @@ dkms.conf
 *.vscode-ctages
 *.txt
 *.pdf
+*.lss
+*.json
