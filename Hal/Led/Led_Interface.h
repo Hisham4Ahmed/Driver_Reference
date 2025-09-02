@@ -17,10 +17,10 @@
 #include "Led_Private.h"
 #include "Led_Config.h"
 
-void mLed_Init(uint8_t LedNumber);
-void mLed_On(uint8_t LedNumber);
-void mLed_Off(uint8_t LedNumber);
-void mLed_Toggle(uint8_t LedNumber);
+void hLed_Init(uint8_t LedNumber);
+void hLed_On(uint8_t LedNumber);
+void hLed_Off(uint8_t LedNumber);
+void hLed_Toggle(uint8_t LedNumber);
 
 
 

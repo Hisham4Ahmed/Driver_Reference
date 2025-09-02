@@ -17,7 +17,7 @@ static uint8_t RGBGroup[RGB_MaxNo]=RGB_GreenPinValue;
 static uint8_t RGBRedPin[RGB_MaxNo]=RGB_RedPinValue;
 static uint8_t RGBGreenPin[RGB_MaxNo]=RGB_GreenPinValue;
 static uint8_t RGBBluePin[RGB_MaxNo]=RGB_GreenPinValue;
-void mRGB_Init(uint8_t RGBLedNumber)
+void hRGB_Init(uint8_t RGBLedNumber)
 {
     if(RGBLedNumber<=RGB_MaxNo)
     {
@@ -33,7 +33,7 @@ void mRGB_Init(uint8_t RGBLedNumber)
          */
     }
 }
-void mRGB_Off(uint8_t RGBLedNumber)
+void hRGB_Off(uint8_t RGBLedNumber)
 {
     if(RGBLedNumber<=RGB_MaxNo)
     {
@@ -54,7 +54,7 @@ void mRGB_Off(uint8_t RGBLedNumber)
 
 
 
-void mRGB_On(uint8_t RGBLedNumber,uint8_t Color )
+void hRGB_On(uint8_t RGBLedNumber,uint8_t Color )
 {
     if(RGBLedNumber<=RGB_MaxNo)
     {
@@ -80,7 +80,7 @@ void mRGB_On(uint8_t RGBLedNumber,uint8_t Color )
             }
             else
             {
-                mRGB_Off(RGBLedNumber);
+                hRGB_Off(RGBLedNumber);
             }
     }
     else

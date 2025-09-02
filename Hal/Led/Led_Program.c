@@ -17,7 +17,7 @@ static uint8_t LedsGroup[Led_MaxNo]=LedGroupValue ;
 static uint8_t LedsPin[Led_MaxNo]=  LedPinValue;
 
 
-void mLed_Init(uint8_t LedNumber)
+void hLed_Init(uint8_t LedNumber)
 {
   if(LedNumber<=Led_MaxNo)
   {
@@ -31,7 +31,7 @@ void mLed_Init(uint8_t LedNumber)
          */
   }
 }
-void mLed_On(uint8_t LedNumber)
+void hLed_On(uint8_t LedNumber)
 {
     if(LedNumber<=Led_MaxNo)
     {
@@ -50,7 +50,7 @@ void mLed_On(uint8_t LedNumber)
     }
 
 }
-void mLed_Off(uint8_t LedNumber)
+void hLed_Off(uint8_t LedNumber)
 {
     if(LedNumber<=Led_MaxNo)
     {
@@ -68,7 +68,7 @@ void mLed_Off(uint8_t LedNumber)
            */
     }
 }
-void mLed_Toggle(uint8_t LedNumber)
+void hLed_Toggle(uint8_t LedNumber)
 {
     if(LedNumber<=Led_MaxNo)
     {
