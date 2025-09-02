@@ -23,9 +23,9 @@
 
 // API's
 
-void mRGB_Init(uint8_t RGBLedNumber);
-void mRGB_On(uint8_t RGBLedNumber,uint8_t Color );
-void mRGB_Off(uint8_t RGBLedNumber);
+void hRGB_Init(uint8_t RGBLedNumber);
+void hRGB_On(uint8_t RGBLedNumber,uint8_t Color );
+void hRGB_Off(uint8_t RGBLedNumber);
 
 
 #endif 
