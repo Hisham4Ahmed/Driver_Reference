@@ -1,29 +1,31 @@
 /**
- * @file      main.c
- * @author    your name (you@domain.com)
+ * @file main.c
+ * @author Hesham Ahmed (Hisham4Ahmed@gmail.com)
  * @brief 
- * @version   0.1
- * @date      2025-08-25
+ * @version 0.1
+ * @date 2025-09-02
  * 
  * @copyright Copyright (c) 2025
  * 
  */
 #include "Hal/Lcd/Lcd_Interface.h"
-uint8_t customChar[] = {
-  0x00,
-  0x11,
-  0x11,
-  0x11,
-  0x1F,
-  0x00,
-  0x04,
-  0x00
-};
+#include "Hal/Btn/Btn_Interface.h"
+#include "Hal/Led/Led_Interface.h"
 void main()
 {
-    hLcd_Init();
-    hLcd_StoreNewPattern(0,customChar);
-    hLcd_WriteString((uint8_t*)"Gestell");
-    hLcd_MoveDigits(SecondLine,15);
-    hLcd_WriteCharacter(0);
+  hBtn_Init(1);
+  hLed_Init(1);
+  uint8_t BtnState = Btn_NotValidState ;
+  while(1)
+  {
+    BtnState = hBtn_IsPressed(1);
+    if(BtnState==Btn_Pressed)
+    {
+      hLed_On(1);
+    }
+    else 
+    {
+      hLed_Off(1);
+    }
+  }
 }
