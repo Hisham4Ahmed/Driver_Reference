@@ -11,21 +11,19 @@
 #include "Hal/Lcd/Lcd_Interface.h"
 #include "Hal/Btn/Btn_Interface.h"
 #include "Hal/Led/Led_Interface.h"
+#include "Hal/Keypad/Kpd_Interface.h"
 void main()
 {
-  hBtn_Init(1);
-  hLed_Init(1);
-  uint8_t BtnState = Btn_NotValidState ;
+  hLcd_Init();
+  hKeypad_Init();
+  uint8_t KeypadValue = 0xFF;
   while(1)
   {
-    BtnState = hBtn_IsPressed(1);
-    if(BtnState==Btn_Pressed)
+    KeypadValue = hKeypad_GetPressedKey();
+    if(KeypadValue!=0xFF)
     {
-      hLed_On(1);
+      hLcd_WriteCharacter(KeypadValue);
     }
-    else 
-    {
-      hLed_Off(1);
-    }
+
   }
 }

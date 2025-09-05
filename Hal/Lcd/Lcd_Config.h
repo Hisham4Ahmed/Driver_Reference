@@ -16,7 +16,7 @@
 
 
 // _4BitMode      _8BitMode 
-#define Lcd_Mode      _4BitMode 
+#define Lcd_Mode      _8BitMode 
 
 
 // Lcd Control Pin and Groups
@@ -80,7 +80,7 @@
         Lcd_CursorOn   
         Lcd_CursorBlink
 */
-#define Lcd_DisplayControl     Lcd_CursorBlink
+#define Lcd_DisplayControl     Lcd_DisplayOn
 
 
 /* Function Set 
@@ -96,4 +96,4 @@
 
  */
 
-#define Lcd_FunctionSet   Lcd_4BitMode_TwoLine_5x7Size
+#define Lcd_FunctionSet   Lcd_8BitMode_TwoLine_5x7Size
