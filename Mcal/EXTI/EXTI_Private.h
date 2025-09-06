@@ -65,4 +65,9 @@ void __vector_3(void)  __attribute__((signal)); // INT2
 #define EXTI_FallingEdge 2 
 #define EXTI_RisingEdge  3
 
+
+
+#define EXTI0            0
+#define EXTI1            1
+#define EXTI2            2
 #endif /*_EXTI_PRIVATE_H_*/

@@ -12,6 +12,7 @@
 #include "Hal/Btn/Btn_Interface.h"
 #include "Hal/Led/Led_Interface.h"
 #include "Hal/Keypad/Kpd_Interface.h"
+#include "Hal/BtnWithEXTI/BtnEXTI_Interface.h"
 void main()
 {
   hLcd_Init();
