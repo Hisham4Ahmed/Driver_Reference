@@ -8,6 +8,11 @@
  * 
  */
 
+
+
+#include "../../Common/Config.h"
+#if Led_Driver ==Enable
+
 #include "Led_Interface.h"
 
 
@@ -83,3 +88,4 @@ void hLed_Toggle(uint8_t LedNumber)
     }
 
 }
+#endif

@@ -9,7 +9,9 @@
  * 
  */
 
+#include "../../Common/Config.h"
 
+#if Btn_Driver==Enable
 #include "Btn_Interface.h"
 
 
@@ -33,3 +35,6 @@ uint8_t hBtn_IsPressed(uint8_t BtnNumber)
 
     return BtnState ; 
 }
+
+
+#endif /*Btn_Driver*/

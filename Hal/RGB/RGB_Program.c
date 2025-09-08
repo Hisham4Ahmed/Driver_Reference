@@ -10,6 +10,11 @@
  */
 
 
+
+#include "../../Common/Config.h"
+#if RGB_Driver ==Enable
+
+
 #include "RGB_Interface.h"
 
 
@@ -92,3 +97,4 @@ void hRGB_On(uint8_t RGBLedNumber,uint8_t Color )
     }
 
 }
+#endif

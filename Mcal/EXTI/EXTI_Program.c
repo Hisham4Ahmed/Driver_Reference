@@ -9,6 +9,9 @@
  * 
  */
 
+#include "../../Common/Config.h"
+#if EXTI_Driver ==Enable
+
 #include "EXTI_Interface.h"
 
 static void(*EXTI0_ISRHandler)(void)=Null;
@@ -257,3 +260,5 @@ void __vector_3(void)
          */ 
     }
 }
+
+#endif

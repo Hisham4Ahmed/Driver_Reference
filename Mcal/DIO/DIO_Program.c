@@ -9,6 +9,9 @@
  * 
  */
 
+#include "../../Common/Config.h"
+#if DIO_Driver ==Enable
+
 #include "DIO_Interface.h"
 
 // DirectionState Shall be from following options :
@@ -283,3 +286,5 @@ void mDIO_ReadGroup(uint8_t GroupName,uint8_t *InputValue)
          */
     }
 }
+
+#endif 

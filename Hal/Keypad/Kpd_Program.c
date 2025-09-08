@@ -9,6 +9,8 @@
  * 
  */
 
+#include "../../Common/Config.h"
+#if Keypad_Driver==Enable
 
 #include "Kpd_Interface.h"
 #include <util/delay.h>
@@ -69,3 +71,4 @@ uint8_t hKeypad_GetPressedKey(void)
     }
     return Kpd_Value; 
 }
+#endif

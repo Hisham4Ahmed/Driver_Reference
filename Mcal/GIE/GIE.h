@@ -11,6 +11,8 @@
 
 #ifndef _GIE_H_
 #define _GIE_H_
+#include "../../Common/Config.h"
+#if GIE_Driver==Enable
 #include <stdint.h>
 #include "../RegistersAddress.h"
 #include "../../Common/Macros.h"
@@ -21,5 +23,5 @@
 #define mGIE_Enable()       SetBit(SREG_Reg,I_Bit)
 #define mGIE_Diable()       ClearBit(SREG_Reg,I_Bit)
  
-
+#endif /*GIE_Driver*/
 #endif/*_GIE_H_*/

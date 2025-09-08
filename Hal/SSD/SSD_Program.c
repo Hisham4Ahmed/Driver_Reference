@@ -9,6 +9,9 @@
  * 
  */
 
+#include "../../Common/Config.h"
+#if SSD_Driver ==Enable
+
 #include "SSD_Interface.h"
 
 static uint8_t SSD_TypeConnection[SSD_MaxNo]=SSD_TypeConnectionValue;
@@ -123,3 +126,4 @@ void hSSD_DisableSSD(uint8_t SSDNumber)
          */
     }
 }
+#endif 

@@ -9,6 +9,10 @@
  * 
  */
 
+
+#include "../../Common/Config.h"
+#if LCD_Driver ==Enable
+
 #include <util/delay.h>
 #include "Lcd_Interface.h"
 
@@ -256,5 +260,7 @@ void hLcd_ClearScreen()
     hLcd_ClearFirstLine();
     hLcd_ClearSecondLine();
 }
+
+#endif
 
 
